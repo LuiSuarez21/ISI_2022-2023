@@ -1,28 +1,35 @@
-﻿using Sharing_Knowledge.Models;
+﻿using Nancy;
+using Nancy.Json;
+using DTO.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
+using DAL.Data;
 
 namespace DAL.Operations.ClientDt
 {
     public class MockClientRepo : IClientRepo
     {
-        public IEnumerable<Client> GetAppClients()
+        public IEnumerable<Client> GetAllClients()
         {
-         
-            var clients = new List<Client>
-            {
-                new Client {ID_Cliente=0, Nome="José", Morada="Rua", Email="jose@ndiened", Pass="mdiefnie", Telemovel=948394398, DataNascimento=DateTime.Now}
-            };
-
-            return clients;
+            var cs = ClientOp.GetClt();
+            return cs;
         }
 
         public Client GetClient(int id)
         {
-            return new Client { ID_Cliente = 1, Nome = "Luis", Morada = "Rua", Email = "jose@ndiened", Pass = "mdiefnie", Telemovel = 948394398, DataNascimento=DateTime.Now   };
+            var cs = ClientOp.GetCltById(id);
+            bool find = false;
+            for (int i = 0; i < cs.Count(); i++)
+            {
+                if (i == id) find = true;
+            }
+            if(find == true)return cs.ElementAt<Client>(id);
+            else { return null; }
         }
 
     }

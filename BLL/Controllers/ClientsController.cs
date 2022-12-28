@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DAL.Operations.ClientDt;
-using Sharing_Knowledge.Models;
+using DTO.Models;
 
 namespace Sharing_Knowledge.Controllers
 {
@@ -18,16 +18,20 @@ namespace Sharing_Knowledge.Controllers
         [HttpGet]
         public ActionResult <IEnumerable<Client>> GetAllClients()
         {
-            var clientItems = _repository.GetAppClients();
+            var clientItems = _repository.GetAllClients();
             return Ok(clientItems);
         }
 
         //GET api/clients/5
         [HttpGet("{id}")]
-        public ActionResult<Client> GetCommandById(int id)
+        public ActionResult<Client> GetClientById(int id)
         {
             var clientItems = _repository.GetClient(id);
-            return Ok(clientItems);
+            if (clientItems != null) return Ok(clientItems);
+            else
+            {
+                return NotFound();
+            }
         }
 
         /*

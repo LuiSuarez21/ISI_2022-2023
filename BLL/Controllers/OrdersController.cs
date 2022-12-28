@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DAL.Operations.OrderDt;
+using DTO.Models;
 
 namespace Sharing_Knowledge.Controllers
 {
@@ -11,32 +13,49 @@ namespace Sharing_Knowledge.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        [HttpGet("GetPedidos")]
-
-        public IActionResult Get()
+        private readonly MockOrderRepo _repository = new MockOrderRepo();
+        //GET api/clients
+        [HttpGet]
+        public ActionResult<IEnumerable<Order>> GetAllClients()
         {
-            return Ok();
+            var clientItems = _repository.GetAllClients();
+            return Ok(clientItems);
         }
 
-        [HttpPost("CreatePedidos")]
+        //GET api/clients/5
+        [HttpGet("{id}")]
+        public ActionResult<Client> GetClientById(int id)
+        {
+            var clientItems = _repository.GetClient(id);
+            if (clientItems != null) return Ok(clientItems);
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        /*
+        [HttpPost("CreateCliente")]
 
         public IActionResult Create()
         {
             return Ok();
         }
 
-        [HttpPut("UpdatePedidos")]
+        [HttpPut("UpdateCliente")]
 
         public IActionResult Update()
         {
             return Ok();
         }
 
-        [HttpDelete("DeletePedidos")]
+        [HttpDelete("DeleteCliente")]
 
         public IActionResult Delete()
         {
             return Ok();
         }
+        
+        */
     }
 }

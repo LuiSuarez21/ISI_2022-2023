@@ -1,4 +1,4 @@
-﻿using Sharing_Knowledge.Models;
+﻿using DTO.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Operations.ClientDt
 {
-    public interface IClientRepo
+    interface IClientRepo
     {
-        IEnumerable<Client> GetAppClients();
+        IEnumerable<Client> GetAllClients();
         Client GetClient(int id);
     }
 }

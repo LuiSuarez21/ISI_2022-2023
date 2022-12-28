@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Sharing_Knowledge
+namespace DAL.Connection
 {
     public class ConnectionDB
     {
@@ -14,7 +14,7 @@ namespace Sharing_Knowledge
 
         public string ConnString { get => $"Server = {Server}; Database = {Database}; User ID = {Username}; Password = {Password}; Trusted_Connection = False; Pooling = False;"; }
 
-        public ConnectionDB()
+        private ConnectionDB()
         {
             this.Server = "JOSEESTEVES";
             this.Database = "TP2_ISI";
@@ -22,6 +22,15 @@ namespace Sharing_Knowledge
             this.Password = "1234";
         }
 
+      
         public string GetConnectionString() => ConnString;
+
+        public static string GetConnectionStr (){
+
+           var cn = new ConnectionDB();
+           var connectDB = cn.GetConnectionString();
+           return connectDB;
+
+        }
     }
 }

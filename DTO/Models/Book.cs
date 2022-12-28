@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-namespace Sharing_Knowledge.Models
+namespace DTO.Models
 {
     public class Book
     {
