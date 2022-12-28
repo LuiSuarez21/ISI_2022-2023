@@ -8,4 +8,10 @@
     <ProjectReference Include="..\DTO\DTO.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Operations\BookDt\" />
+    <Folder Include="Operations\OrderDt\" />
+    <Folder Include="Operations\RequesDt\" />
+  </ItemGroup>
+
 </Project>

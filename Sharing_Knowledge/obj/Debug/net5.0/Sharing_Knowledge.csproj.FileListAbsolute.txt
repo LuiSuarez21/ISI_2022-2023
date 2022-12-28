@@ -128,3 +128,10 @@ C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Inf
 C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\Sharing_Knowledge\bin\Debug\net5.0\BLL.pdb
 C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\Sharing_Knowledge\bin\Debug\net5.0\DAL.pdb
 C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\Sharing_Knowledge\bin\Debug\net5.0\DTO.pdb
+C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\Sharing_Knowledge\bin\Debug\net5.0\Google.Protobuf.dll
+C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\Sharing_Knowledge\bin\Debug\net5.0\K4os.Compression.LZ4.dll
+C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\Sharing_Knowledge\bin\Debug\net5.0\K4os.Compression.LZ4.Streams.dll
+C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\Sharing_Knowledge\bin\Debug\net5.0\K4os.Hash.xxHash.dll
+C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\Sharing_Knowledge\bin\Debug\net5.0\MySql.Data.dll
+C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\Sharing_Knowledge\bin\Debug\net5.0\ZstdNet.dll
+C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\Sharing_Knowledge\bin\Debug\net5.0\BouncyCastle.Crypto.dll

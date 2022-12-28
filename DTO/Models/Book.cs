@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sharing_Knowledge.Models
 {
-    public class tblBook
+    public class Book
     {
         [Key]
         public int ID_Livros { get; set; }

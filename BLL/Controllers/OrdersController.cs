@@ -9,7 +9,7 @@ namespace Sharing_Knowledge.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Pedidos : ControllerBase
+    public class OrdersController : ControllerBase
     {
         [HttpGet("GetPedidos")]
 

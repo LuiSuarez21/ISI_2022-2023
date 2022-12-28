@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sharing_Knowledge.Models
 {
-    public class tblCliente
+    public class Client
     {
         [Key]
         public int ID_Cliente { get; set; }

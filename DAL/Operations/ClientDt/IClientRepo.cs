@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DTO.Data
+namespace DAL.Operations.ClientDt
 {
-    class IClientRepo
+    public interface IClientRepo
     {
-        IEnumerable<tblCliente> GetAppClients();
-        tblCliente GetClient(int id);
+        IEnumerable<Client> GetAppClients();
+        Client GetClient(int id);
     }
 }

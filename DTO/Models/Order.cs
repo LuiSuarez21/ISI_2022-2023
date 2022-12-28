@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Sharing_Knowledge.Models
 {
-    public class tblPedidos
+    public class Order
     {
         [Key]
-        public int ID_Pedido { get; set; }
+        public int ID_Encomenda { get; set; }
 
-        public int ID_Livro { get; set; }
+        public int ID_Pedido { get; set; }
+        public int ID_Cliente { get; set; }
+        public string Estado { get; set; }
 
     }
 }

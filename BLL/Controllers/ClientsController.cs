@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DAL.Operations.ClientDt;
+using Sharing_Knowledge.Models;
 
 namespace Sharing_Knowledge.Controllers
 {
@@ -14,18 +16,18 @@ namespace Sharing_Knowledge.Controllers
         private readonly MockClientRepo _repository = new MockClientRepo();
         //GET api/clients
         [HttpGet]
-        public IActionResult <Enumerable><Client>> GetAllClients()
+        public ActionResult <IEnumerable<Client>> GetAllClients()
         {
             var clientItems = _repository.GetAppClients();
-            return Ok();
+            return Ok(clientItems);
         }
 
         //GET api/clients/5
         [HttpGet("{id}")]
-        public ActionResult<Clients> GetCommandById(int id)
+        public ActionResult<Client> GetCommandById(int id)
         {
-            var clientItems = _repository.GetCommandById(id);
-            return Ok(commandItems);
+            var clientItems = _repository.GetClient(id);
+            return Ok(clientItems);
         }
 
         /*
