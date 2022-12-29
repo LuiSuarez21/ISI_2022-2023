@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,7 @@ namespace DAL.Operations.OrderDt
 {
     interface IOrderRepo
     {
+        IEnumerable<Order> GetAllOrders();
+        Order GetOrder(int id);
     }
 }

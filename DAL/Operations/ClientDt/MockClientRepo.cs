@@ -17,20 +17,23 @@ namespace DAL.Operations.ClientDt
         public IEnumerable<Client> GetAllClients()
         {
             var cs = ClientOp.GetClt();
-            return cs;
+            if (cs != null) return cs;
+            else
+            {
+                return null;
+            }
         }
 
         public Client GetClient(int id)
         {
             var cs = ClientOp.GetCltById(id);
-            bool find = false;
-            for (int i = 0; i < cs.Count(); i++)
+            if (cs != null) return cs.ElementAt<Client>(0);
+            else
             {
-                if (i == id) find = true;
+                return null;
             }
-            if(find == true)return cs.ElementAt<Client>(id);
-            else { return null; }
         }
-
     }
+
+    
 }

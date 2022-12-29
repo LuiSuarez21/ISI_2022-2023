@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using DAL.Operations.ClientDt;
 using DTO.Models;
 
-namespace Sharing_Knowledge.Controllers
+namespace BLL.Controllers
 {
     [Route("api/clients")]
     [ApiController]
@@ -19,7 +19,11 @@ namespace Sharing_Knowledge.Controllers
         public ActionResult <IEnumerable<Client>> GetAllClients()
         {
             var clientItems = _repository.GetAllClients();
-            return Ok(clientItems);
+            if (clientItems != null) return Ok(clientItems);
+            else
+            {
+                return NotFound();
+            }
         }
 
         //GET api/clients/5

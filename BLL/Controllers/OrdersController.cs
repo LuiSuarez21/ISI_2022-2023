@@ -7,27 +7,32 @@ using System.Threading.Tasks;
 using DAL.Operations.OrderDt;
 using DTO.Models;
 
-namespace Sharing_Knowledge.Controllers
+namespace BLL.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase
     {
+        
         private readonly MockOrderRepo _repository = new MockOrderRepo();
         //GET api/clients
         [HttpGet]
-        public ActionResult<IEnumerable<Order>> GetAllClients()
+        public ActionResult<IEnumerable<Order>> GetAllOrders()
         {
-            var clientItems = _repository.GetAllClients();
-            return Ok(clientItems);
+            var orderItems = _repository.GetAllOrders();
+            if(orderItems != null)return Ok(orderItems);
+            else
+            {
+                return NotFound();
+            }
         }
 
         //GET api/clients/5
         [HttpGet("{id}")]
-        public ActionResult<Client> GetClientById(int id)
+        public ActionResult<Order> GetOrderById(int id)
         {
-            var clientItems = _repository.GetClient(id);
-            if (clientItems != null) return Ok(clientItems);
+            var orderItems = _repository.GetOrder(id);
+            if (orderItems != null) return Ok(orderItems);
             else
             {
                 return NotFound();

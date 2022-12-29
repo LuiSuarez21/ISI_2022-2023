@@ -9,7 +9,7 @@ namespace DAL.Operations.BookDt
 {
     interface IBookRepo
     {
-        IEnumerable<Order> GetAllOrders();
-        Order GetOrder(int id);
+        IEnumerable<Book> GetAllBooks();
+        Book GetBookById(int id);
     }
 }

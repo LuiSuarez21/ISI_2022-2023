@@ -9,3 +9,4 @@ C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Inf
 C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\DTO\obj\Debug\net5.0\DTO.dll
 C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\DTO\obj\Debug\net5.0\ref\DTO.dll
 C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\DTO\obj\Debug\net5.0\DTO.pdb
+C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\DTO\obj\Debug\net5.0\DTO.csproj.AssemblyReference.cache

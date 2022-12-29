@@ -35,11 +35,11 @@ namespace DAL.Data
                     Pass = sqlrd.GetValue(4).ToString(),
                     Telemovel = Convert.ToInt32(sqlrd.GetValue(5)),
                     DataNascimento = Convert.ToDateTime(sqlrd.GetValue(6))
- 
                 }); 
             }
 
-            return c;
+            if (c.Count() != 0) return c;
+            else { return null; }
         }
 
         public static IEnumerable<Client> GetCltById(int id)
@@ -55,7 +55,7 @@ namespace DAL.Data
             while (sqlrd.Read())
             {
 
-                if (c[i].ID_Cliente == id)
+                if (i == id)
                 {
                     c.Add(new Client()
                     {

@@ -12,22 +12,24 @@ namespace DAL.Operations.BookDt
 {
     public class MockBookRepo
     {
-        public IEnumerable<Order> GetAllClients()
+        public IEnumerable<Book> GetAllBooks()
         {
-            var cs = OrderOp.GetClt();
-            return cs;
+            var cs = BookOp.GetBooks();
+            if (cs != null) return cs;
+            else
+            {
+                return null;
+            }
         }
 
-        public Order GetClient(int id)
+        public Book GetBookById(int id)
         {
-            var cs = ClientOp.GetCltById(id);
-            bool find = false;
-            for (int i = 0; i < cs.Count(); i++)
+            var cs = BookOp.GetBkById(id);
+            if (cs != null) return cs.ElementAt<Book>(0);
+            else
             {
-                if (i == id) find = true;
+                return null;
             }
-            if (find == true) return cs.ElementAt<Client>(id);
-            else { return null; }
         }
     }
 }
