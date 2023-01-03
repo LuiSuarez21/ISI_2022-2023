@@ -29,5 +29,25 @@ namespace DAL.Operations.RequesDt
                 return null;
             }
         }
+
+        public bool CreateRequest(Request r)
+        {
+            bool y = RequestOp.CreateRequest(r);
+
+            return y;
+        }
+
+        public bool UpdateRequest(Request r)
+        {
+            bool y = RequestOp.UpdateRequest(r);
+
+            return y;
+        }
+
+        public bool DeleteRequest(int id)
+        {
+            bool y = RequestOp.DeleteRequest(id);
+            return y;
+        }
     }
 }

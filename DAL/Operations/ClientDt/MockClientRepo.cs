@@ -33,6 +33,26 @@ namespace DAL.Operations.ClientDt
                 return null;
             }
         }
+
+        public bool InsertClient(Client c)
+        {
+            bool y = ClientOp.CreateClient(c);
+
+            return y;
+        }
+
+        public bool UpdateClient(Client c)
+        {
+            bool y = ClientOp.UpdateClient(c);
+
+            return y;
+        }
+
+        public bool DeleteClient(int id)
+        {
+            bool y = ClientOp.DeleteClient(id);
+            return y;
+        }
     }
 
     

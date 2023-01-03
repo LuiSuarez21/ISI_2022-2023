@@ -29,5 +29,25 @@ namespace DAL.Operations.OrderDt
                 return null;
             }
         }
+
+        public bool CreateOrder(Order o)
+        {
+            bool y = OrderOp.CreateOrder(o);
+
+            return y;
+        }
+
+        public bool UpdateOrder(Order o)
+        {
+            bool y = OrderOp.UpdateOrder(o);
+
+            return y;
+        }
+
+        public bool DeleteOrder(int id)
+        {
+            bool y = OrderOp.DeleteOrder(id);
+            return y;
+        }
     }
 }

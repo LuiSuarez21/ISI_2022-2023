@@ -31,5 +31,25 @@ namespace DAL.Operations.BookDt
                 return null;
             }
         }
+
+        public bool CreateBook(Book b)
+        {
+            bool y = BookOp.CreateBook(b);
+
+            return y;
+        }
+
+        public bool UpdateBook(Book b)
+        {
+            bool y = BookOp.UpdateBook(b);
+
+            return y;
+        }
+
+        public bool DeleteBook(int id)
+        {
+            bool y = BookOp.DeleteBook(id);
+            return y;
+        }
     }
 }

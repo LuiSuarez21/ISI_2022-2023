@@ -11,5 +11,12 @@ namespace DAL.Operations.OrderDt
     {
         IEnumerable<Order> GetAllOrders();
         Order GetOrder(int id);
+
+        bool CreateOrder(Order o);
+
+        bool UpdateOrder(Order o);
+
+        bool DeleteOrder(int id);
+
     }
 }

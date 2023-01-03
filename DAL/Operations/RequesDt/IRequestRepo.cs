@@ -11,5 +11,11 @@ namespace DAL.Operations.RequesDt
     {
         IEnumerable<Request> GetAllRequests();
         Request GetRequest(int id);
+
+        bool CreateRequest(Request r);
+
+        bool UpdateRequest(Request r);
+
+        bool DeleteRequest(int id);
     }
 }

@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using DAL.Operations.ClientDt;
 using DTO.Models;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace BLL.Controllers
 {
@@ -38,28 +40,39 @@ namespace BLL.Controllers
             }
         }
 
-        /*
-        [HttpPost("CreateCliente")]
-
-        public IActionResult Create()
+        //Post api/clients/
+        [HttpPost]
+        public ActionResult<Client> PostClient(Client c)
         {
-            return Ok();
+            var clientItems = _repository.InsertClient(c);
+            if (clientItems != false) return Ok(clientItems);
+            else
+            {
+                return NoContent();
+            }
         }
 
-        [HttpPut("UpdateCliente")]
-
-        public IActionResult Update()
+        [HttpPut]
+        public ActionResult<Client> UpdateClient(Client c)
         {
-            return Ok();
+            var clientItems = _repository.UpdateClient(c);
+            if (clientItems != false) return Ok(clientItems);
+            else
+            {
+                return NoContent();
+            }
         }
 
-        [HttpDelete("DeleteCliente")]
-
-        public IActionResult Delete()
+        [HttpDelete("{id}")]
+        public IActionResult DeleteClient(int id)
         {
-            return Ok();
+            var clientItems = _repository.DeleteClient(id);
+            if (clientItems != false) return Ok(clientItems);
+            else
+            {
+                return NotFound();
+            }
         }
-        
-        */
+
     }
 }

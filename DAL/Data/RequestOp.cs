@@ -63,5 +63,81 @@ namespace DAL.Data
             if (r.Count() != 0) return r;
             else { return null; }
         }
+
+        public static bool CreateRequest(Request request)
+        {
+            int x = 0;
+            string mainConnection = ConnectionDB.GetConnectionStr();
+            using (SqlConnection sqlConnection = new SqlConnection(mainConnection))
+            {
+                sqlConnection.Open();
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Pedidos (ID_Pedido ,ID_Livro) VALUES (@ID_PEDIDO ,@ID_LIVRO)", sqlConnection))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@ID_PEDIDO", request.ID_Pedido);
+                    cmd.Parameters.AddWithValue("@ID_LIVRO", request.ID_Livro);
+                    cmd.ExecuteNonQuery();
+                    x++;
+                }
+            }
+            if (x == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public static bool UpdateRequest(Request request)
+        {
+            int x = 0;
+            string mainConnection = ConnectionDB.GetConnectionStr();
+            using (SqlConnection sqlConnection = new SqlConnection(mainConnection))
+            {
+                sqlConnection.Open();
+                using (SqlCommand cmd = new SqlCommand("UPDATE Pedidos SET ID_Livro=@ID_Livro, ID_Pedido=@ID_Pedido WHERE ID_Livro=@ID_Livro", sqlConnection))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@ID_Pedido", request.ID_Pedido);
+                    cmd.Parameters.AddWithValue("@ID_Livro", request.ID_Livro);
+                    cmd.ExecuteNonQuery();
+                    x++;
+                }
+            }
+            if (x == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public static bool DeleteRequest(int id)
+        {
+            List<Request> r = new List<Request>();
+            int x = 0;
+            string mainConnection = ConnectionDB.GetConnectionStr();
+            using (SqlConnection conn = new SqlConnection(mainConnection))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("Delete from lockers where ID_Pedido=@Id", conn))
+
+                {
+
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                    x++;
+
+                }
+            }
+            if (x != 0) return true;
+            else { return false; }
+
+        }
     }
 }

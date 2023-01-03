@@ -38,28 +38,38 @@ namespace BLL.Controllers
                 return NotFound();
             }
         }
-        /*
 
-        [HttpPost("CreateEncomenda")]
-
-        public IActionResult Create()
+        [HttpPost]
+        public ActionResult<Request> PostRequest(Request r)
         {
-            return Ok();
+            var RequestItems = _repository.CreateRequest(r);
+            if (RequestItems != false) return Ok(RequestItems);
+            else
+            {
+                return NoContent();
+            }
         }
 
-        [HttpPut("UpdateEncomenda")]
-
-        public IActionResult Update()
+        [HttpPut]
+        public ActionResult<Request> UpdateRequest(Request r)
         {
-            return Ok();
+            var RequestItems = _repository.UpdateRequest(r);
+            if (RequestItems != false) return Ok(RequestItems);
+            else
+            {
+                return NoContent();
+            }
         }
 
-        [HttpDelete("DeleteEncomenda")]
-
-        public IActionResult Delete()
+        [HttpDelete("{id}")]
+        public IActionResult DeleteRequest(int id)
         {
-            return Ok();
+            var requestItems = _repository.DeleteRequest(id);
+            if (requestItems != false) return Ok(requestItems);
+            else
+            {
+                return NotFound();
+            }
         }
-        */
     }
 }

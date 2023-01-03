@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using DAL.Operations.OrderDt;
 using DTO.Models;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace BLL.Controllers
 {
@@ -39,28 +41,38 @@ namespace BLL.Controllers
             }
         }
 
-        /*
-        [HttpPost("CreateCliente")]
-
-        public IActionResult Create()
+        [HttpPost]
+        public ActionResult<Order> PostOrder(Order o)
         {
-            return Ok();
+            var OrderItems = _repository.CreateOrder(o);
+            if (OrderItems != false) return Ok(OrderItems);
+            else
+            {
+                return NoContent();
+            }
         }
 
-        [HttpPut("UpdateCliente")]
-
-        public IActionResult Update()
+        [HttpPut]
+        public ActionResult<Order> UpdateOrder(Order o)
         {
-            return Ok();
+            var OrderItems = _repository.UpdateOrder(o);
+            if (OrderItems != false) return Ok(OrderItems);
+            else
+            {
+                return NoContent();
+            }
         }
 
-        [HttpDelete("DeleteCliente")]
-
-        public IActionResult Delete()
+        [HttpDelete("{id}")]
+        public IActionResult DeleteOrder(int id)
         {
-            return Ok();
+            var orderItems = _repository.DeleteOrder(id);
+            if (orderItems != false) return Ok(orderItems);
+            else
+            {
+                return NotFound();
+            }
         }
-        
-        */
+
     }
 }

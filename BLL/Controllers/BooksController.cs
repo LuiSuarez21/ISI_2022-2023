@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using DAL.Operations.BookDt;
 using DTO.Models;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace BLL.Controllers
 {
@@ -38,28 +40,40 @@ namespace BLL.Controllers
             }
         }
 
-        /*
-        [HttpPost("CreateCliente")]
-
-        public IActionResult Create()
+        //Post api/clients/
+        [HttpPost]
+        public ActionResult<Book> PostBook(Book b)
         {
-            return Ok();
+            var booksItems = _repository.CreateBook(b);
+            if (booksItems != false) return Ok(booksItems);
+            else
+            {
+                return NoContent();
+            }
         }
 
-        [HttpPut("UpdateCliente")]
-
-        public IActionResult Update()
+        [HttpPut]
+        public ActionResult<Book> UpdateBook(Book b)
         {
-            return Ok();
+            var booksItems = _repository.UpdateBook(b);
+            if (booksItems != false) return Ok(booksItems);
+            else
+            {
+                return NoContent();
+            }
         }
 
-        [HttpDelete("DeleteCliente")]
+        [HttpDelete("{id}")]
 
-        public IActionResult Delete()
+        public IActionResult DeleteBook(int id)
         {
-            return Ok();
+            var booksItems = _repository.DeleteBook(id);
+            if (booksItems != false) return Ok(booksItems);
+            else
+            {
+                return NotFound();
+            }
         }
-        
-        */
+
     }
 }

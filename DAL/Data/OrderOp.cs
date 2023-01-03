@@ -67,5 +67,85 @@ namespace DAL.Data
             if (o.Count() != 0) return o;
             else { return null; }
         }
+
+        public static bool CreateOrder(Order order)
+        {
+            int x = 0;
+            string mainConnection = ConnectionDB.GetConnectionStr();
+            using (SqlConnection sqlConnection = new SqlConnection())
+            {
+                sqlConnection.Open();
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Encomenda (ID_Encomenda, ID_Pedido, ID_Cliente, Estado) VALUES (@ID_ENCOMENDA, @ID_PEDIDO, @ID_CLIENTE, @ESTADO)", sqlConnection))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@ID_LIVROS", order.ID_Encomenda);
+                    cmd.Parameters.AddWithValue("@TITLE", order.ID_Pedido);
+                    cmd.Parameters.AddWithValue("@AUTHOR", order.ID_Cliente);
+                    cmd.Parameters.AddWithValue("@GENRE", order.Estado);
+                    cmd.ExecuteNonQuery();
+                    x++;
+                }
+            }
+            if (x == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public static bool UpdateOrder(Order order)
+        {
+            int x = 0;
+            string mainConnection = ConnectionDB.GetConnectionStr();
+            using (SqlConnection sqlConnection = new SqlConnection())
+            {
+                sqlConnection.Open();
+                using (SqlCommand cmd = new SqlCommand("UPDATE Encomenda SET ID_Livros=@ID_Livros, Title=@Title, Author=@Author, Genre=@Genre WHERE ID_Livros=@ID_Livros", sqlConnection))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@ID_Livros", order.ID_Encomenda);
+                    cmd.Parameters.AddWithValue("@Title", order.ID_Pedido);
+                    cmd.Parameters.AddWithValue("@Author", order.ID_Cliente);
+                    cmd.Parameters.AddWithValue("@Genre", order.Estado);
+                    cmd.ExecuteNonQuery();
+                    x++;
+                }
+            }
+            if (x == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public static bool DeleteOrder(int id)
+        {
+            List<Order> o = new List<Order>();
+            int x = 0;
+            string mainConnection = ConnectionDB.GetConnectionStr();
+            using (SqlConnection conn = new SqlConnection(mainConnection))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("Delete from dbo.Encomenda where ID_Encomenda=@Id", conn))
+
+                {
+
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.ExecuteNonQuery();
+                    x++;
+
+                }
+            }
+            if (x != 0) return true;
+            else { return false; }
+
+        }
     }
 }

@@ -11,5 +11,11 @@ namespace DAL.Operations.BookDt
     {
         IEnumerable<Book> GetAllBooks();
         Book GetBookById(int id);
+
+        bool CreateBook(Book b);
+
+        bool UpdateBook(Book b);
+
+        bool DeleteBook(int id);
     }
 }
