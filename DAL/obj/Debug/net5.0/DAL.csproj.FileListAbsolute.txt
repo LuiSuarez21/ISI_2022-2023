@@ -28,3 +28,18 @@ C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Inf
 C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\ISI_23\DAL\obj\Debug\net5.0\DAL.dll
 C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\ISI_23\DAL\obj\Debug\net5.0\ref\DAL.dll
 C:\Users\josel\Desktop\LESI\4º ano\1º Semestre\Integração de Sistemas de Informação\TP 2\ISI_23\DAL\obj\Debug\net5.0\DAL.pdb
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\bin\Debug\net5.0\DAL.deps.json
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\bin\Debug\net5.0\DAL.dll
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\bin\Debug\net5.0\ref\DAL.dll
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\bin\Debug\net5.0\DAL.pdb
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\bin\Debug\net5.0\DTO.dll
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\bin\Debug\net5.0\DTO.pdb
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\obj\Debug\net5.0\DAL.csproj.AssemblyReference.cache
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\obj\Debug\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\obj\Debug\net5.0\DAL.AssemblyInfoInputs.cache
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\obj\Debug\net5.0\DAL.AssemblyInfo.cs
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\obj\Debug\net5.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\obj\Debug\net5.0\DAL.csproj.CopyComplete
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\obj\Debug\net5.0\DAL.dll
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\obj\Debug\net5.0\ref\DAL.dll
+C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DAL\obj\Debug\net5.0\DAL.pdb

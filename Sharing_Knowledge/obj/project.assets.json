@@ -8927,25 +8927,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\josel\\.nuget\\packages\\": {},
+    "C:\\Users\\joaom\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josel\\Desktop\\LESI\\4º ano\\1º Semestre\\Integração de Sistemas de Informação\\TP 2\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj",
+      "projectUniqueName": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj",
       "projectName": "Sharing_Knowledge",
-      "projectPath": "C:\\Users\\josel\\Desktop\\LESI\\4º ano\\1º Semestre\\Integração de Sistemas de Informação\\TP 2\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj",
-      "packagesPath": "C:\\Users\\josel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josel\\Desktop\\LESI\\4º ano\\1º Semestre\\Integração de Sistemas de Informação\\TP 2\\ISI_23\\Sharing_Knowledge\\obj\\",
+      "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj",
+      "packagesPath": "C:\\Users\\joaom\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\Sharing_Knowledge\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\josel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\joaom\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -8961,14 +8961,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\josel\\Desktop\\LESI\\4º ano\\1º Semestre\\Integração de Sistemas de Informação\\TP 2\\ISI_23\\BLL\\BLL.csproj": {
-              "projectPath": "C:\\Users\\josel\\Desktop\\LESI\\4º ano\\1º Semestre\\Integração de Sistemas de Informação\\TP 2\\ISI_23\\BLL\\BLL.csproj"
+            "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\BLL\\BLL.csproj"
             },
-            "C:\\Users\\josel\\Desktop\\LESI\\4º ano\\1º Semestre\\Integração de Sistemas de Informação\\TP 2\\ISI_23\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\josel\\Desktop\\LESI\\4º ano\\1º Semestre\\Integração de Sistemas de Informação\\TP 2\\ISI_23\\DAL\\DAL.csproj"
+            "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DAL\\DAL.csproj"
             },
-            "C:\\Users\\josel\\Desktop\\LESI\\4º ano\\1º Semestre\\Integração de Sistemas de Informação\\TP 2\\ISI_23\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\josel\\Desktop\\LESI\\4º ano\\1º Semestre\\Integração de Sistemas de Informação\\TP 2\\ISI_23\\DTO\\DTO.csproj"
+            "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\DTO.csproj": {
+              "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\DTO.csproj"
             }
           }
         }

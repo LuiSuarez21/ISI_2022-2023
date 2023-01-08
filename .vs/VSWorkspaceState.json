@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Sharing_Knowledge",
-    "\\Sharing_Knowledge\\Data"
+    "\\DAL",
+    "\\DAL\\Connection",
+    "\\Sharing_Knowledge"
   ],
-  "SelectedNode": "\\Sharing_Knowledge\\Data\\tblCliente.cs",
+  "SelectedNode": "\\DAL\\Connection\\ConnectionDB.cs",
   "PreviewInSolutionExplorer": false
 }

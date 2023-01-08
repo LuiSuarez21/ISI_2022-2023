@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using DTO.Models;
 
 /*
@@ -27,7 +28,7 @@ namespace DAL.Operations.BookDt
 
         bool DeleteBook(int id);
 
-        string GetBestSellers(int price);
+        string GetBestSellers(int value);
 
         string GetBestSellers2(string author);
 

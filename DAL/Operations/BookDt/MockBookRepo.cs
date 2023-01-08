@@ -7,8 +7,12 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Xml;
 using DAL.Data;
 using DTO.Models;
+using Nancy.Json;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 /*
  * 
@@ -62,10 +66,11 @@ namespace DAL.Operations.BookDt
             return y;
         }
 
-        public string GetBestSellers(int price)
+
+        public string GetBestSellers(int value)
         {
             string myApiKey = GetMyApiKey();
-            string connectionTest = string.Format("https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?price=" + price.ToString() + "&api-key=" + myApiKey);
+            string connectionTest = string.Format("https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?price=" + value.ToString() + "&api-key=" + myApiKey);
             WebRequest request = WebRequest.Create(connectionTest);
             request.Method = "GET";
             HttpWebResponse response = null;
@@ -79,10 +84,35 @@ namespace DAL.Operations.BookDt
                 if (strResult == null) return null;
                 else
                 {
-                    return strResult;
+                    // Parse the JSON object
+                    JObject json = JObject.Parse(strResult);
+
+                    // Initialize an empty string to store the formatted book information
+                    string bookInfo = "";
+
+                    // Iterate through the list of books
+                    foreach (var book in json["results"])
+                    {
+                        // Extract the book information
+                        string title = book["title"].ToString();
+                        string author = book["author"].ToString();
+                        string publisher = book["publisher"].ToString();
+                        string price = book["price"].ToString();
+
+                        // Format the book information
+                        string bookString = $"{title} by {author} ({publisher}) ${price}";
+
+                        // Add the book information to the string
+                        bookInfo += bookString + "\n";
+                    }
+
+                    // Return the formatted string
+                    return bookInfo;
                 }
             }
         }
+
+
 
         public string GetBestSellers2(string author)
         {
