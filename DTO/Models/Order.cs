@@ -3,9 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-
+/*
+ * 
+ * Autores do projecto: Luis Esteves/16960 || João Riberio/17214;
+ * Disciplina: Integração de Sistemas de Informação;
+ * Projecto II;
+ * Propósito do trabalho: Criar uma API REST Full de gerência de utilizadores e de entrega de livros;
+ *
+ */
 namespace DTO.Models
 {
+    //Modelo de dados para defenir uma Encomenda;
     public class Order
     {
         [Key]

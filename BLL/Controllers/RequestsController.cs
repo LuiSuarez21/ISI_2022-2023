@@ -7,6 +7,14 @@ using System.Threading.Tasks;
 using DAL.Operations.RequesDt;
 using DTO.Models;
 
+/*
+ * 
+ * Autores do projecto: Luis Esteves/16960 || João Riberio/17214;
+ * Disciplina: Integração de Sistemas de Informação;
+ * Projecto II;
+ * Propósito do trabalho: Criar uma API REST Full de gerência de utilizadores e de entrega de livros;
+ *
+ */
 
 namespace BLL.Controllers
 {
@@ -15,7 +23,9 @@ namespace BLL.Controllers
     public class RequestsController : ControllerBase
     {
         private readonly MockRequestRepo _repository = new  MockRequestRepo();
-        //GET api/clients
+
+        //GET api/Requests
+        //Esta função realiza a operação GET, buscando todos os dados de todos os pedidos feitos até agora;
         [HttpGet]
         public ActionResult<IEnumerable<Request>> GetAllRequests()
         {
@@ -27,7 +37,8 @@ namespace BLL.Controllers
             }
         }
 
-        //GET api/clients/5
+        //GET api/Requests/5
+        //Esta função realiza a operação GET, buscando todos os dados de um pedido a partir de um ID;
         [HttpGet("{id}")]
         public ActionResult<Request> GetClientById(int id)
         {
@@ -39,7 +50,9 @@ namespace BLL.Controllers
             }
         }
 
-        [HttpPost]
+        //POST api/Requests/newRequest
+        //Esta função realiza a operação POST, criando um novo pedido na database;
+        [HttpPost("newRequest")]
         public ActionResult<Request> PostRequest(Request r)
         {
             var RequestItems = _repository.CreateRequest(r);
@@ -50,7 +63,9 @@ namespace BLL.Controllers
             }
         }
 
-        [HttpPut]
+        //PUT api/Request/updRequest
+        //Esta função realiza a operação PUT, actualizando a informação de um dado pedido;
+        [HttpPut("updRequest")]
         public ActionResult<Request> UpdateRequest(Request r)
         {
             var RequestItems = _repository.UpdateRequest(r);
@@ -61,7 +76,9 @@ namespace BLL.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        //DELETE api/Requests/delRequest/5
+        //Esta função realiza a operação DELETE, eliminando um determinado pedido;
+        [HttpDelete("delRequest/{id}")]
         public IActionResult DeleteRequest(int id)
         {
             var requestItems = _repository.DeleteRequest(id);

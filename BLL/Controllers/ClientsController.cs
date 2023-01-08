@@ -9,6 +9,15 @@ using DTO.Models;
 using System.Data.SqlClient;
 using System.Data;
 
+/*
+ * 
+ * Autores do projecto: Luis Esteves/16960 || João Riberio/17214;
+ * Disciplina: Integração de Sistemas de Informação;
+ * Projecto II;
+ * Propósito do trabalho: Criar uma API REST Full de gerência de utilizadores e de entrega de livros;
+ *
+ */
+
 namespace BLL.Controllers
 {
     [Route("api/clients")]
@@ -16,7 +25,9 @@ namespace BLL.Controllers
     public class ClientsController : ControllerBase
     {
         private readonly MockClientRepo _repository = new MockClientRepo();
+
         //GET api/clients
+        //Esta função realiza a operação GET, buscando todos os dados de todos os Clientes registados na database;
         [HttpGet]
         public ActionResult <IEnumerable<Client>> GetAllClients()
         {
@@ -29,6 +40,7 @@ namespace BLL.Controllers
         }
 
         //GET api/clients/5
+        //Esta função realiza a operação GET, buscando todos os dados de um Cliente;
         [HttpGet("{id}")]
         public ActionResult<Client> GetClientById(int id)
         {
@@ -40,8 +52,9 @@ namespace BLL.Controllers
             }
         }
 
-        //Post api/clients/
-        [HttpPost]
+        //POST api/clients/newClient
+        //Esta função realiza a operação POST, criando um novo cliente na database;
+        [HttpPost("newClient")]
         public ActionResult<Client> PostClient(Client c)
         {
             var clientItems = _repository.InsertClient(c);
@@ -52,7 +65,9 @@ namespace BLL.Controllers
             }
         }
 
-        [HttpPut]
+        //PUT api/clients/updClient
+        //Esta função realiza a operação PUT, actualizando um determinado cliente;
+        [HttpPut("updClient")]
         public ActionResult<Client> UpdateClient(Client c)
         {
             var clientItems = _repository.UpdateClient(c);
@@ -63,7 +78,9 @@ namespace BLL.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        //DELETE api/clients/delCliente
+        //Esta função realiza a operação DELETE, eliminando um determinado cliente;
+        [HttpDelete("delClient")]
         public IActionResult DeleteClient(int id)
         {
             var clientItems = _repository.DeleteClient(id);

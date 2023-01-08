@@ -1,5 +1,4 @@
-﻿using DTO.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,18 +11,11 @@ using System.Threading.Tasks;
  * Propósito do trabalho: Criar uma API REST Full de gerência de utilizadores e de entrega de livros;
  *
  */
-namespace DAL.Operations.OrderDt
+namespace DTO.ModelsDTO
 {
-    interface IOrderRepo
+    public class ClientDTO
     {
-        IEnumerable<Order> GetAllOrders();
-        Order GetOrder(int id);
-
-        bool CreateOrder(Order o);
-
-        bool UpdateOrder(Order o);
-
-        bool DeleteOrder(int id);
-
+        public string Nome { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
     }
 }

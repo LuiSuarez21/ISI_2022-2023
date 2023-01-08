@@ -9,6 +9,15 @@ using DTO.Models;
 using System.Data.SqlClient;
 using System.Data;
 
+/*
+ * 
+ * Autores do projecto: Luis Esteves/16960 || João Riberio/17214;
+ * Disciplina: Integração de Sistemas de Informação;
+ * Projecto II;
+ * Propósito do trabalho: Criar uma API REST Full de gerência de utilizadores e de entrega de livros;
+ *
+ */
+
 namespace BLL.Controllers
 {
     [Route("api/[controller]")]
@@ -17,7 +26,9 @@ namespace BLL.Controllers
     {
         
         private readonly MockOrderRepo _repository = new MockOrderRepo();
-        //GET api/clients
+
+        //GET api/Orders
+        //Esta função realiza a operação GET, buscando todos os dados de todos as encomendas;
         [HttpGet]
         public ActionResult<IEnumerable<Order>> GetAllOrders()
         {
@@ -29,7 +40,8 @@ namespace BLL.Controllers
             }
         }
 
-        //GET api/clients/5
+        //GET api/Orders/5
+        //Esta função realiza a operação GET, buscando todos os dados de uma dada encomenda;
         [HttpGet("{id}")]
         public ActionResult<Order> GetOrderById(int id)
         {
@@ -41,7 +53,9 @@ namespace BLL.Controllers
             }
         }
 
-        [HttpPost]
+        //POST api/Orders/newOrder
+        //Esta função realiza a operação POST, criando uma nova encomenda na database;
+        [HttpPost("newOrder")]
         public ActionResult<Order> PostOrder(Order o)
         {
             var OrderItems = _repository.CreateOrder(o);
@@ -52,7 +66,9 @@ namespace BLL.Controllers
             }
         }
 
-        [HttpPut]
+        //PUT api/Orders/updOrder
+        //Esta função realiza a operação PUT, actualizando uma determinada encomenda;
+        [HttpPut("updOrder")]
         public ActionResult<Order> UpdateOrder(Order o)
         {
             var OrderItems = _repository.UpdateOrder(o);
@@ -63,7 +79,9 @@ namespace BLL.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        //DELETE api/Orders/delOrder/5
+        //Esta função realiza a operação DELETE, eliminando uma determinada encomenda;
+        [HttpDelete("delOrder/{id}")]
         public IActionResult DeleteOrder(int id)
         {
             var orderItems = _repository.DeleteOrder(id);
