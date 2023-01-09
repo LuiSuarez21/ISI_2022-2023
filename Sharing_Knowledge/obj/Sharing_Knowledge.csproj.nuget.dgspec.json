@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj": {}
+    "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\BLL\\BLL.csproj": {
+    "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\joaom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\BLL\\obj\\",
+        "projectPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\josel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\joaom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\josel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -34,11 +34,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DAL\\DAL.csproj"
+              "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\DTO.csproj"
+              "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DTO\\DTO.csproj"
               }
             }
           }
@@ -105,21 +105,21 @@
         }
       }
     },
-    "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DAL\\DAL.csproj": {
+    "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\joaom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DAL\\obj\\",
+        "projectPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\josel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\joaom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\josel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -135,8 +135,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\DTO.csproj"
+              "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DTO\\DTO.csproj"
               }
             }
           }
@@ -207,21 +207,21 @@
         }
       }
     },
-    "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\DTO.csproj": {
+    "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\joaom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\josel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\joaom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\josel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -289,21 +289,21 @@
         }
       }
     },
-    "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj": {
+    "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj",
+        "projectUniqueName": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj",
         "projectName": "Sharing_Knowledge",
-        "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj",
-        "packagesPath": "C:\\Users\\joaom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\Sharing_Knowledge\\obj\\",
+        "projectPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\Sharing_Knowledge\\Sharing_Knowledge.csproj",
+        "packagesPath": "C:\\Users\\josel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\Sharing_Knowledge\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\joaom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\josel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -319,14 +319,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\BLL\\BLL.csproj"
+              "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DAL\\DAL.csproj"
+              "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\joaom\\OneDrive\\Ambiente de Trabalho\\1234\\ISI_23\\DTO\\DTO.csproj"
+              "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\josel\\Desktop\\1234\\ISI_23\\DTO\\DTO.csproj"
               }
             }
           }

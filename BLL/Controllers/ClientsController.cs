@@ -18,6 +18,11 @@ using System.Data;
  *
  */
 
+/*
+ * BLL: Camada apelidada de BLL (Business Logic Layer);
+ * Neste projecto, a BLL é onde existem os Controllers e onde emprementamos os métodos desenvolvidos na camada DAL;
+ * 
+ */
 namespace BLL.Controllers
 {
     [Route("api/clients")]
@@ -26,6 +31,7 @@ namespace BLL.Controllers
     {
         private readonly MockClientRepo _repository = new MockClientRepo();
 
+        #region GET Methods
         //GET api/clients
         //Esta função realiza a operação GET, buscando todos os dados de todos os Clientes registados na database;
         [HttpGet]
@@ -51,7 +57,9 @@ namespace BLL.Controllers
                 return NotFound();
             }
         }
+        #endregion
 
+        #region POST Methods
         //POST api/clients/newClient
         //Esta função realiza a operação POST, criando um novo cliente na database;
         [HttpPost("newClient")]
@@ -64,7 +72,9 @@ namespace BLL.Controllers
                 return NoContent();
             }
         }
+        #endregion
 
+        #region PUT Methods
         //PUT api/clients/updClient
         //Esta função realiza a operação PUT, actualizando um determinado cliente;
         [HttpPut("updClient")]
@@ -77,7 +87,9 @@ namespace BLL.Controllers
                 return NoContent();
             }
         }
+        #endregion
 
+        #region DELETE Methods
         //DELETE api/clients/delCliente
         //Esta função realiza a operação DELETE, eliminando um determinado cliente;
         [HttpDelete("delClient")]
@@ -90,6 +102,7 @@ namespace BLL.Controllers
                 return NotFound();
             }
         }
+        #endregion
 
     }
 }

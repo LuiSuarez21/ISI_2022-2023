@@ -8,10 +8,18 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * 
+ * Autores do projecto: Luis Esteves/16960 || João Ribeiro/17214;
+ * Disciplina: Integração de Sistemas de Informação;
+ * Projecto II;
+ * Propósito do trabalho: Criar uma API SOAP e uma API REST Full de gerência de utilizadores e de entrega de livros;
+ *
+ */
+
 namespace SOAP.Services
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Client" in code, svc and config file together.
-    // NOTE: In order to launch WCF Test Client for testing this service, please select Client.svc or Client.svc.cs at the Solution Explorer and start debugging.
+   
     public class Client : IClient
     {
         string connectionString = "Server=tcp:isi.database.windows.net,1433;Initial Catalog=ISI_TP2;Persist Security Info=False;User ID=ISI_SuperAdmin;Password=Teste1234++;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";

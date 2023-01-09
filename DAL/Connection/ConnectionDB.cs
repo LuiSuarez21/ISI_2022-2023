@@ -12,18 +12,27 @@ using System.Threading.Tasks;
  *
  */
 
+/*
+ * DAL: Camada apelidada de DAL (Data Access Layer);
+ * Neste projecto, a DAL é onde existe a interação com a base de dados;
+ * 
+ */
+
 namespace DAL.Connection
 {
     //Classe responável por determinar qual a connection string para conectar ao servidor Azure que contem a API e a database e os métodos para chegar a tal connectio string;
     public class ConnectionDB
     {
+        #region Propriedades
         public string Server { get; set; }
         public string Database { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
 
         public string ConnString { get => $"Server = {Server}; Initial Catalog = {Database}; User ID = {Username}; Password = {Password}; Persist Security Info=False; MultipleActiveResultSets=False; Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"; }
+        #endregion
 
+        #region Construtor
         private ConnectionDB()
         {
             this.Server = "tcp:isi.database.windows.net,1433";
@@ -31,8 +40,9 @@ namespace DAL.Connection
             this.Username = "ISI_SuperAdmin";
             this.Password = "Teste1234++";
         }
+        #endregion
 
-
+        #region Métodos
         public string GetConnectionString() => ConnString;
 
         public static string GetConnectionStr (){
@@ -42,5 +52,6 @@ namespace DAL.Connection
            return connectDB;
 
         }
+        #endregion
     }
 }

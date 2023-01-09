@@ -5,18 +5,20 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
-
+/*
+ * 
+ * Autores do projecto: Luis Esteves/16960 || João Ribeiro/17214;
+ * Disciplina: Integração de Sistemas de Informação;
+ * Projecto II;
+ * Propósito do trabalho: Criar uma API SOAP e uma API REST Full de gerência de utilizadores e de entrega de livros;
+ *
+ */
 namespace SOAP.Services
 {
-    /// <summary>
-    /// Summary description for SharingKnowledge
-    /// </summary>
     [WebService(Namespace = "http://www.ipca.pt/isi202223/",
     Description = "ISI202223 - exemplo de XML web service")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
-    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
-    // [System.Web.Script.Services.ScriptService]
     public class SharingKnowledge : System.Web.Services.WebService
     {
         string connectionString = "Server=tcp:isi.database.windows.net,1433;Initial Catalog=ISI_TP2;Persist Security Info=False;User ID=ISI_SuperAdmin;Password=Teste1234++;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";

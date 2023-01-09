@@ -34,3 +34,15 @@ C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DTO\obj\Debug\net5.0\DT
 C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DTO\obj\Debug\net5.0\DTO.dll
 C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DTO\obj\Debug\net5.0\ref\DTO.dll
 C:\Users\joaom\OneDrive\Ambiente de Trabalho\1234\ISI_23\DTO\obj\Debug\net5.0\DTO.pdb
+C:\Users\josel\Desktop\1234\ISI_23\DTO\bin\Debug\net5.0\DTO.deps.json
+C:\Users\josel\Desktop\1234\ISI_23\DTO\bin\Debug\net5.0\DTO.dll
+C:\Users\josel\Desktop\1234\ISI_23\DTO\bin\Debug\net5.0\ref\DTO.dll
+C:\Users\josel\Desktop\1234\ISI_23\DTO\bin\Debug\net5.0\DTO.pdb
+C:\Users\josel\Desktop\1234\ISI_23\DTO\obj\Debug\net5.0\DTO.csproj.AssemblyReference.cache
+C:\Users\josel\Desktop\1234\ISI_23\DTO\obj\Debug\net5.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josel\Desktop\1234\ISI_23\DTO\obj\Debug\net5.0\DTO.AssemblyInfoInputs.cache
+C:\Users\josel\Desktop\1234\ISI_23\DTO\obj\Debug\net5.0\DTO.AssemblyInfo.cs
+C:\Users\josel\Desktop\1234\ISI_23\DTO\obj\Debug\net5.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\josel\Desktop\1234\ISI_23\DTO\obj\Debug\net5.0\DTO.dll
+C:\Users\josel\Desktop\1234\ISI_23\DTO\obj\Debug\net5.0\ref\DTO.dll
+C:\Users\josel\Desktop\1234\ISI_23\DTO\obj\Debug\net5.0\DTO.pdb

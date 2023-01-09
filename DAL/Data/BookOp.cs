@@ -18,11 +18,19 @@ using DAL.Connection;
  *
  */
 
+/*
+ * DAL: Camada apelidada de DAL (Data Access Layer);
+ * Neste projecto, a DAL é onde existe a interação com a base de dados;
+ * 
+ */
+
 
 namespace DAL.Data
 {
     public class BookOp
     {
+        #region Métodos para manipular os dados dos Livros
+        //Método permite ir a database e buscar todos os dados de livros que se encontram lá;
         public static IEnumerable<Book> GetBooks()
         {
             List<Book> b = new List<Book>();
@@ -51,6 +59,7 @@ namespace DAL.Data
             else { return null; }
         }
 
+        //Método que permite buscar um determinado livro a database;
         public static IEnumerable<Book> GetBkById(int id)
         {
             List<Book> b = new List<Book>();
@@ -86,6 +95,7 @@ namespace DAL.Data
             else { return null; }
         }
 
+        //Método que permite criar um novo livro na database;
         public static bool CreateBook(Book book)
         {
             int x = 0;
@@ -118,6 +128,7 @@ namespace DAL.Data
             }
         }
 
+        //Método que permite dar update da imformação de um determinado livro;
         public static bool UpdateBook(Book book)
         {
             int x = 0;
@@ -150,6 +161,7 @@ namespace DAL.Data
             }
         }
 
+        //Método que permite eliminar um determinado livro a partir de um ID fornecido;
         public static bool DeleteBook(int id)
         {
             List<Book> b = new List<Book>();
@@ -173,5 +185,6 @@ namespace DAL.Data
             else { return false; }
 
         }
+        #endregion
     }
 }

@@ -13,13 +13,13 @@ using System.Linq;
 using System.Threading.Tasks;
 /*
  * 
- * Autores do projecto: Luis Esteves/16960 || João Riberio/17214;
+ * Autores do projecto: Luis Esteves/16960 || João Ribeiro/17214;
  * Disciplina: Integração de Sistemas de Informação;
  * Projecto II;
- * Propósito do trabalho: Criar uma API REST Full de gerência de utilizadores e de entrega de livros;
+ * Propósito do trabalho: Criar uma API SOAP e uma API REST Full de gerência de utilizadores e de entrega de livros;
  *
  */
-namespace Sharing_Knowledge
+namespace SharingKnowledge
 {
     public class Startup
     {

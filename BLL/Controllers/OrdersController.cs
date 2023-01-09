@@ -18,6 +18,12 @@ using System.Data;
  *
  */
 
+/*
+ * BLL: Camada apelidada de BLL (Business Logic Layer);
+ * Neste projecto, a BLL é onde existem os Controllers e onde emprementamos os métodos desenvolvidos na camada DAL;
+ * 
+ */
+
 namespace BLL.Controllers
 {
     [Route("api/[controller]")]
@@ -27,6 +33,7 @@ namespace BLL.Controllers
         
         private readonly MockOrderRepo _repository = new MockOrderRepo();
 
+        #region GET Methods
         //GET api/Orders
         //Esta função realiza a operação GET, buscando todos os dados de todos as encomendas;
         [HttpGet]
@@ -52,7 +59,9 @@ namespace BLL.Controllers
                 return NotFound();
             }
         }
+        #endregion
 
+        #region POST Methods
         //POST api/Orders/newOrder
         //Esta função realiza a operação POST, criando uma nova encomenda na database;
         [HttpPost("newOrder")]
@@ -65,7 +74,9 @@ namespace BLL.Controllers
                 return NoContent();
             }
         }
+        #endregion
 
+        #region PUT Methods
         //PUT api/Orders/updOrder
         //Esta função realiza a operação PUT, actualizando uma determinada encomenda;
         [HttpPut("updOrder")]
@@ -78,7 +89,9 @@ namespace BLL.Controllers
                 return NoContent();
             }
         }
+        #endregion
 
+        #region DELETE Methods
         //DELETE api/Orders/delOrder/5
         //Esta função realiza a operação DELETE, eliminando uma determinada encomenda;
         [HttpDelete("delOrder/{id}")]
@@ -91,6 +104,7 @@ namespace BLL.Controllers
                 return NotFound();
             }
         }
+        #endregion
 
     }
 }

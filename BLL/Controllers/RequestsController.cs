@@ -16,6 +16,12 @@ using DTO.Models;
  *
  */
 
+/*
+ * BLL: Camada apelidada de BLL (Business Logic Layer);
+ * Neste projecto, a BLL é onde existem os Controllers e onde emprementamos os métodos desenvolvidos na camada DAL;
+ * 
+ */
+
 namespace BLL.Controllers
 {
     [Route("api/[controller]")]
@@ -24,6 +30,7 @@ namespace BLL.Controllers
     {
         private readonly MockRequestRepo _repository = new  MockRequestRepo();
 
+        #region GET Methods
         //GET api/Requests
         //Esta função realiza a operação GET, buscando todos os dados de todos os pedidos feitos até agora;
         [HttpGet]
@@ -49,7 +56,9 @@ namespace BLL.Controllers
                 return NotFound();
             }
         }
+        #endregion
 
+        #region POST Methods
         //POST api/Requests/newRequest
         //Esta função realiza a operação POST, criando um novo pedido na database;
         [HttpPost("newRequest")]
@@ -62,7 +71,9 @@ namespace BLL.Controllers
                 return NoContent();
             }
         }
+        #endregion
 
+        #region PUT Methods
         //PUT api/Request/updRequest
         //Esta função realiza a operação PUT, actualizando a informação de um dado pedido;
         [HttpPut("updRequest")]
@@ -75,7 +86,9 @@ namespace BLL.Controllers
                 return NoContent();
             }
         }
+        #endregion
 
+        #region DELETE Methods
         //DELETE api/Requests/delRequest/5
         //Esta função realiza a operação DELETE, eliminando um determinado pedido;
         [HttpDelete("delRequest/{id}")]
@@ -88,5 +101,6 @@ namespace BLL.Controllers
                 return NotFound();
             }
         }
+        #endregion
     }
 }

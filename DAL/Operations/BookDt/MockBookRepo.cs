@@ -16,16 +16,25 @@ using Newtonsoft.Json.Linq;
 
 /*
  * 
- * Autores do projecto: Luis Esteves/16960 || João Riberio/17214;
+ * Autores do projecto: Luis Esteves/16960 || João Ribeiro/17214;
  * Disciplina: Integração de Sistemas de Informação;
  * Projecto II;
- * Propósito do trabalho: Criar uma API REST Full de gerência de utilizadores e de entrega de livros;
+ * Propósito do trabalho: Criar uma API SOAP e uma API REST Full de gerência de utilizadores e de entrega de livros;
  *
  */
+
+/*
+ * DAL: Camada apelidada de DAL (Data Access Layer);
+ * Neste projecto, a DAL é onde existe a interação com a base de dados;
+ * 
+ */
+
 namespace DAL.Operations.BookDt
 {
     public class MockBookRepo
     {
+        #region Funções
+        //Função que permite ir buscar todos os livros que existem na DataBase;
         public IEnumerable<Book> GetAllBooks()
         {
             var cs = BookOp.GetBooks();
@@ -36,6 +45,7 @@ namespace DAL.Operations.BookDt
             }
         }
 
+        //Método que permite buscar um determinado livro a partir de um ID expecifico;
         public Book GetBookById(int id)
         {
             var cs = BookOp.GetBkById(id);
@@ -46,6 +56,7 @@ namespace DAL.Operations.BookDt
             }
         }
 
+        //Cria um livro novo na DataBase;
         public bool CreateBook(Book b)
         {
             bool y = BookOp.CreateBook(b);
@@ -53,6 +64,7 @@ namespace DAL.Operations.BookDt
             return y;
         }
 
+        //Actualiza a informação de um dado livro;
         public bool UpdateBook(Book b)
         {
             bool y = BookOp.UpdateBook(b);
@@ -60,6 +72,7 @@ namespace DAL.Operations.BookDt
             return y;
         }
 
+        //Elimina um determinado livro a partir de um ID;
         public bool DeleteBook(int id)
         {
             bool y = BookOp.DeleteBook(id);
@@ -67,6 +80,7 @@ namespace DAL.Operations.BookDt
         }
 
 
+        //Nesta funçáo, realizamos uma ligação a uma API externa e realizamos uma operação que permite receber todos os best-sellers do NYT que tem um determinado preço; 
         public string GetBestSellers(int value)
         {
             string myApiKey = GetMyApiKey();
@@ -113,11 +127,11 @@ namespace DAL.Operations.BookDt
         }
 
 
-
-        public string GetBestSellers2(string author)
+        //Nesta funçáo, realizamos uma ligação a uma API externa e realizamos uma operação que permite receber todos os best-sellers do NYT que tem um determinado autor; 
+        public string GetBestSellers2(string name)
         {
             string myApiKey = GetMyApiKey();
-            string connectionTest = string.Format("https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?author=" + author + "&api-key=" + myApiKey);
+            string connectionTest = string.Format("https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?author=" + name + "&api-key=" + myApiKey);
             WebRequest request = WebRequest.Create(connectionTest);
             request.Method = "GET";
             HttpWebResponse response = null;
@@ -131,7 +145,30 @@ namespace DAL.Operations.BookDt
                 if (strResult == null) return null;
                 else
                 {
-                    return strResult;
+                    // Parse the JSON object
+                    JObject json = JObject.Parse(strResult);
+
+                    // Initialize an empty string to store the formatted book information
+                    string bookInfo = "";
+
+                    // Iterate through the list of books
+                    foreach (var book in json["results"])
+                    {
+                        // Extract the book information
+                        string title = book["title"].ToString();
+                        string author = book["author"].ToString();
+                        string publisher = book["publisher"].ToString();
+                        string price = book["price"].ToString();
+
+                        // Format the book information
+                        string bookString = $"{title} by {author} ({publisher}) ${price}";
+
+                        // Add the book information to the string
+                        bookInfo += bookString + "\n";
+                    }
+
+                    // Return the formatted string
+                    return bookInfo;
                 }
             }
         }
@@ -140,5 +177,6 @@ namespace DAL.Operations.BookDt
             string myApiKey = "tndxx4IGfSMbz2gF2N65ghwjd5Tz7JjA";
             return myApiKey;
         }
+        #endregion
     }
 }

@@ -18,6 +18,14 @@ using System.IO;
 * Propósito do trabalho: Criar uma API REST Full de gerência de utilizadores e de entrega de livros;
 *
 */
+
+/*
+ * BLL: Camada apelidada de BLL (Business Logic Layer);
+ * Neste projecto, a BLL é onde existem os Controllers e onde emprementamos os métodos desenvolvidos na camada DAL;
+ * 
+ */
+
+
 namespace BLL.Controllers
 {
     [Route("api/[controller]")]
@@ -25,6 +33,9 @@ namespace BLL.Controllers
     public class BooksController : ControllerBase
     {
         private readonly MockBookRepo _repository = new MockBookRepo();
+
+
+        #region GET Methods
         //GET api/Books
         //Esta função realiza a operação GET, buscando todos os dados de todos os livros;
         [HttpGet]
@@ -79,7 +90,9 @@ namespace BLL.Controllers
                 return NotFound();
             }
         }
-        
+        #endregion
+
+        #region POST Methods
         //POST api/Books/newbook
         //Esta função realiza a operação POST, criando um novo livro na database;
         [HttpPost("newbook")]
@@ -92,7 +105,9 @@ namespace BLL.Controllers
                 return NoContent();
             }
         }
+        #endregion
 
+        #region PUT Methods
         //PUT api/Books/updbook
         //Esta função realiza a operação PUT, actualizando a informação de um dado livro;
         [HttpPut("updbook")]
@@ -105,7 +120,9 @@ namespace BLL.Controllers
                 return NoContent();
             }
         }
+        #endregion
 
+        #region DELETE Methods
         //DELETE api/Books/deltbook/4
         //Esta função realiza a operação DELETE, eliminando um dado livro da database a partir de um dado ID;
         [HttpDelete("delbook/{id}")]
@@ -118,6 +135,7 @@ namespace BLL.Controllers
                 return NotFound();
             }
         }
+        #endregion
 
     }
 }

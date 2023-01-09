@@ -11,18 +11,24 @@ using DAL.Connection;
 
 /*
  * 
- * Autores do projecto: Luis Esteves/16960 || João Riberio/17214;
+ * Autores do projecto: Luis Esteves/16960 || João Ribeiro/17214;
  * Disciplina: Integração de Sistemas de Informação;
  * Projecto II;
- * Propósito do trabalho: Criar uma API REST Full de gerência de utilizadores e de entrega de livros;
+ * Propósito do trabalho: Criar uma API SOAP e uma API REST Full de gerência de utilizadores e de entrega de livros;
  *
+ */
+
+/*
+ * DAL: Camada apelidada de DAL (Data Access Layer);
+ * Neste projecto, a DAL é onde existe a interação com a base de dados;
+ * 
  */
 
 namespace DAL.Data
 {
     public class ClientOp
     {
-        
+        #region Métodos que permitem manipular os dados dos Clientes na database
         public static IEnumerable<Client> GetClt()
         {
             List<Client> c = new List<Client>();
@@ -173,6 +179,6 @@ namespace DAL.Data
 
         }
 
-
+        #endregion
     }
 }
