@@ -11,6 +11,7 @@ Trabalho que trata de entrega de livros. Para isto, foi contruída:
 - Uma DataBase, para guardar os dados dos clientes que pretendem realizar encomendas e os respectivos livros;
 - Uma SOAP API, para poder servir como demontração da utilização de uma SOAP API deste projecto;
 
-Para testar o trabalho, utilizamos o Swagger. E o trabalho está disponível na cloud via : 
+Para testar o trabalho, utilizamos o Swagger. 
+E o trabalho está disponível na cloud via : 
 E também no repositório Git : https://github.com/LuiSuarez21/ISI_23
 
